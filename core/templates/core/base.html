@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    {% block corecss %}
+        {% comment %} <link rel="stylesheet" href="core.css"> {% endcomment %}
+        <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+    {% endblock corecss %}
+    <title>Home</title>
+
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        <div class="row">
+            <div class="col-sm-2">
+                {% include 'core/sidebar.html' %}
+                {% comment %} <div class="border-right border-warning h-100">
+                    <div class="text-center">
+                        <img src="{% static 'core/images/download.jpg' %}" alt="profilepic" class="img-fluid rounded-circle mt-5" width="100px" height="100px">
+                        <h3 style="color:white">Katy Perry</h3>
+                    </div>
+                    <hr class="border-light">
+                    <nav class="nav flex-column text-center">
+                        <a href="" class="nav-link">Home</a>
+                        <a href="" class="nav-link">Services</a>
+                        <a href="" class="nav-link">Skill</a>
+                        <a href="" class="nav-link">Contact</a>
+                    </nav>
+                </div> {% endcomment %}
+            </div>
+            <div class="col-sm-10">
+                {% block content %} {% endblock content %}
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
